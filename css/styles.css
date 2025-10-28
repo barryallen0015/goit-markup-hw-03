@@ -1,115 +1,228 @@
-
-
-/* C5, C6, C7, C8 */
+/* ================================
+   Base Styles (С5–С8)
+================================ */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    /* стандартна вага браузера для body */
-    color: #2E2F42;
-    /* домінантний колір тексту */
+    color: #434455;
+    /* Dominant text color */
     background-color: #FFFFFF;
-    /* колір фону за макетом */
     line-height: 1.5;
-    /* C10: множник */
+    /* С10 */
     margin: 0;
-    /* С14: стандартні відступи треба прибрати */
 }
 
-/* C1: використовуємо селектори класів */
-.container {
-    max-width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* ======================
-   TEXT ELEMENTS
-====================== */
-
-/* Заголовки з макету (C9, C10, C12) */
 h1,
 h2,
 h3 {
-    font-family: "Raleway", sans-serif;
-    /* для заголовків */
-    font-weight: 700;
-    /* за макетом */
     color: #2E2F42;
-    line-height: 1.2;
-    /* множник */
+    font-weight: 700;
+    /* С12 */
     margin: 0;
-    /* не повторюємо зайвого */
 }
 
-p {
-    margin: 0;
-    /* С14 */
-}
-
-/* ======================
-   LINKS & BUTTONS
-====================== */
-
-/* C3, C4 — інтерактивні елементи змінюють стан */
-.link,
-.nav-link,
-.contact-link {
-    text-decoration: none;
-    color: inherit;
-    transition: color 250ms ease-in-out;
-}
-
-/* C3 & C4 - hover/focus */
-.link:hover,
-.link:focus,
-.nav-link:hover,
-.nav-link:focus {
-    color: #404BBF;
-    /* активний колір */
-}
-
-.contact-link:hover,
-.contact-link:focus {
-    color: #404BBF;
-    /* активний стан контакту */
-}
-
-/* Кнопки */
-.btn {
-    font-family: inherit;
-    /* C7 */
-    cursor: pointer;
-    /* C13 */
-    border: none;
-    padding: 12px 24px;
-    background-color: #4D5AE5;
-    /* колір з макета */
-    color: #FFFFFF;
-    font-weight: 500;
-    /* C12 */
-    line-height: 1.5;
-    transition: background-color 250ms ease-in-out;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: #404BBF;
-    /* C3 активний стан */
-}
-
-/* ======================
-   DEFAULT RESET
-====================== */
-
-/* Щоб не повторювати стандартні стилі з браузера (C14) */
 ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Наслідує колір з body */
+}
+
+button {
+    font-family: inherit;
+    /* Наслідує Roboto */
+    font-weight: 500;
+    cursor: pointer;
+    /* С13 */
+}
+
+/* ================================
+   Header
+================================ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 156px;
+    border-bottom: 1px solid #E7E9FC;
+}
+
+nav a {
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #404BBF;
+    /* С3 */
+}
+
+address a {
+    font-style: normal;
+}
+
+address a:hover,
+address a:focus {
+    color: #404BBF;
+    /* С4 */
+}
+
+/* ================================
+   Hero Section
+================================ */
+section:first-of-type {
+    background-color: #2E2F42;
+    padding: 188px 0;
+    text-align: center;
+}
+
+section:first-of-type h1 {
+    font-size: 56px;
+    /* С9 */
+    color: #FFFFFF;
+    margin-bottom: 48px;
+    line-height: 1.07;
+}
+
+section:first-of-type button {
+    background-color: #4D5AE5;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+section:first-of-type button:hover,
+section:first-of-type button:focus {
+    background-color: #404BBF;
+    /* С3 */
+}
+
+/* ================================
+   Benefits Section
+================================ */
+section:nth-of-type(2) {
+    padding: 120px 156px;
+}
+
+section:nth-of-type(2) h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+section:nth-of-type(2) p {
+    font-size: 16px;
+    color: #434455;
+    line-height: 1.5;
+}
+
+/* ================================
+   Team Section
+================================ */
+section:nth-of-type(3) {
+    background-color: #F4F4FD;
+    padding: 120px 156px;
+    text-align: center;
+}
+
+section:nth-of-type(3) ul {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+section:nth-of-type(3) li {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+    overflow: hidden;
+}
+
+section:nth-of-type(3) h3 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+}
+
+section:nth-of-type(3) p {
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+/* ================================
+   Portfolio Section
+================================ */
+.portfolio {
+    padding: 120px 156px;
+}
+
+.portfolio-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    transform: scale(1.02);
+    /* С3 */
+}
+
+.portfolio-item-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.portfolio-item-category {
+    font-size: 16px;
+    color: #434455;
+}
+
+/* ================================
+   Footer
+================================ */
+footer {
+    background-color: #2E2F42;
+    color: #F4F4FD;
+    padding: 100px 156px;
+}
+
+footer a {
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #4D5AE5;
+    font-size: 18px;
+    line-height: 1.17;
+    text-transform: uppercase;
+}
+
+footer p {
+    max-width: 264px;
+    margin-top: 16px;
+    color: #E7E9FC;
 }
