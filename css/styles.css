@@ -1,0 +1,65 @@
+/* ----------- Base Styles ----------- */
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    color: #2e2f42;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------- Portfolio Section ----------- */
+.portfolio {
+    padding: 120px 0;
+}
+
+.portfolio__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 72px;
+}
+
+.portfolio__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 24px;
+    padding: 0;
+}
+
+.portfolio__item {
+    border: 1px solid #e7e9fc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.portfolio__item:hover,
+.portfolio__item:focus-within {
+    border-color: #4d5ae5;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio__name {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 16px 0 8px 16px;
+}
+
+.portfolio__category {
+    font-size: 16px;
+    color: #757575;
+    margin: 0 0 16px 16px;
+}
