@@ -1,228 +1,198 @@
-/* ================================
-   Base Styles (С5–С8)
-================================ */
+/* ================= Base ================= */
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #434455;
-    /* Dominant text color */
-    background-color: #FFFFFF;
-    line-height: 1.5;
-    /* С10 */
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #434455;
+  background-color: #ffffff;
+  line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-    color: #2E2F42;
-    font-weight: 700;
-    /* С12 */
-    margin: 0;
+  color: #2e2f42;
+  margin: 0;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    /* Наслідує колір з body */
+  text-decoration: none;
 }
 
 button {
-    font-family: inherit;
-    /* Наслідує Roboto */
-    font-weight: 500;
-    cursor: pointer;
-    /* С13 */
+  font-family: inherit;
+  cursor: pointer;
 }
 
-/* ================================
-   Header
-================================ */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 156px;
-    border-bottom: 1px solid #E7E9FC;
+/* ================= Container ================= */
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-nav a {
-    font-weight: 500;
-    margin-right: 40px;
+/* ================= Header ================= */
+.header {
+  border-bottom: 1px solid #e7e9fc;
 }
 
-nav a:hover,
-nav a:focus {
-    color: #404BBF;
-    /* С3 */
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-address a {
-    font-style: normal;
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-address a:hover,
-address a:focus {
-    color: #404BBF;
-    /* С4 */
+.nav-list {
+  display: flex;
+  gap: 40px;
 }
 
-/* ================================
-   Hero Section
-================================ */
-section:first-of-type {
-    background-color: #2E2F42;
-    padding: 188px 0;
-    text-align: center;
+.nav-link {
+  font-weight: 500;
+  padding: 24px 0;
 }
 
-section:first-of-type h1 {
-    font-size: 56px;
-    /* С9 */
-    color: #FFFFFF;
-    margin-bottom: 48px;
-    line-height: 1.07;
+.nav-link:hover,
+.nav-link:focus {
+  color: #404bbf;
 }
 
-section:first-of-type button {
-    background-color: #4D5AE5;
-    color: #FFFFFF;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    line-height: 1.5;
+.contacts {
+  font-style: normal;
 }
 
-section:first-of-type button:hover,
-section:first-of-type button:focus {
-    background-color: #404BBF;
-    /* С3 */
+.contacts-list {
+  display: flex;
+  gap: 40px;
 }
 
-/* ================================
-   Benefits Section
-================================ */
-section:nth-of-type(2) {
-    padding: 120px 156px;
+.contacts-link:hover,
+.contacts-link:focus {
+  color: #404bbf;
 }
 
-section:nth-of-type(2) h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
+/* ================= Logo ================= */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #4d5ae5;
 }
 
-section:nth-of-type(2) p {
-    font-size: 16px;
-    color: #434455;
-    line-height: 1.5;
+.logo-accent {
+  color: #2e2f42;
 }
 
-/* ================================
-   Team Section
-================================ */
-section:nth-of-type(3) {
-    background-color: #F4F4FD;
-    padding: 120px 156px;
-    text-align: center;
+/* ================= Hero ================= */
+.hero {
+  background-color: #2e2f42;
+  text-align: center;
+  padding: 188px 0;
 }
 
-section:nth-of-type(3) ul {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
+.hero-title {
+  color: #ffffff;
+  font-size: 56px;
+  line-height: 1.07;
+  margin-bottom: 48px;
 }
 
-section:nth-of-type(3) li {
-    background-color: #FFFFFF;
-    border-radius: 4px;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
-    overflow: hidden;
+.hero-button {
+  background-color: #4d5ae5;
+  color: #ffffff;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 4px;
 }
 
-section:nth-of-type(3) h3 {
-    font-size: 20px;
-    margin: 16px 0 8px;
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #404bbf;
 }
 
-section:nth-of-type(3) p {
-    margin-bottom: 32px;
-    font-size: 16px;
+/* ================= Benefits ================= */
+.benefits {
+  padding: 120px 0;
 }
 
-/* ================================
-   Portfolio Section
-================================ */
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* ================= Team ================= */
+.team {
+  background-color: #f4f4fd;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+.team-item {
+  background-color: #ffffff;
+}
+
+.team-name {
+  font-size: 20px;
+  margin: 16px 0 8px;
+}
+
+/* ================= Portfolio ================= */
 .portfolio {
-    padding: 120px 156px;
+  padding: 120px 0;
 }
 
-.portfolio-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 72px;
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 72px;
 }
 
 .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .portfolio-item {
-    background-color: #FFFFFF;
-    border: 1px solid #E7E9FC;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #e7e9fc;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
-    transform: scale(1.02);
-    /* С3 */
+.portfolio-item:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-item-title {
-    font-size: 20px;
-    margin-bottom: 8px;
+.portfolio-content {
+  padding: 32px 16px;
 }
 
-.portfolio-item-category {
-    font-size: 16px;
-    color: #434455;
+/* ================= Footer ================= */
+.footer {
+  background-color: #2e2f42;
+  padding: 100px 0;
 }
 
-/* ================================
-   Footer
-================================ */
-footer {
-    background-color: #2E2F42;
-    color: #F4F4FD;
-    padding: 100px 156px;
-}
-
-footer a {
-    font-weight: 700;
-    font-family: 'Raleway', sans-serif;
-    color: #4D5AE5;
-    font-size: 18px;
-    line-height: 1.17;
-    text-transform: uppercase;
-}
-
-footer p {
-    max-width: 264px;
-    margin-top: 16px;
-    color: #E7E9FC;
+.footer-text {
+  color: #e7e9fc;
+  max-width: 264px;
+  margin-top: 16px;
 }
